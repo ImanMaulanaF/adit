@@ -103,4 +103,5 @@ public class Beranda_Admin extends AppCompatActivity {
         RiwayatPembelianAdapter adapter = new RiwayatPembelianAdapter(list);
         rvRiwayat.setAdapter(adapter);
     }
+
 }
