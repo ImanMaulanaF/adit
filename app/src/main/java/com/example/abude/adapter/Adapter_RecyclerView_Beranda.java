@@ -1,4 +1,4 @@
-package com.example.abude;
+package com.example.abude.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.abude.R;
+
 import java.util.ArrayList;
 
 public class Adapter_RecyclerView_Beranda extends RecyclerView.Adapter<Adapter_RecyclerView_Beranda.ViewHolder> {
@@ -24,24 +27,23 @@ public class Adapter_RecyclerView_Beranda extends RecyclerView.Adapter<Adapter_R
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.lngTV.setText(Jenis.get(position));
-
+        holder.tvJenisKonsumen.setText(Jenis.get(position));
     }
 
     @Override
     public int getItemCount() {
-        Jenis = new ArrayList<>();
-        Jenis.add("Aye");
-        Jenis.add("Dana");
+//        Jenis = new ArrayList<>();
+//        Jenis.add("Aye");
+//        Jenis.add("Dana");
         return Jenis.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView lngTV;
+        TextView tvJenisKonsumen;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            lngTV = itemView.findViewById(R.id.recycler_view);
+            tvJenisKonsumen = itemView.findViewById(R.id.txt_jenis_konsumen);
         }
     }
 }

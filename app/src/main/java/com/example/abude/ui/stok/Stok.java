@@ -1,4 +1,4 @@
-package com.example.abude;
+package com.example.abude.ui.stok;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.abude.R;
+import com.example.abude.ui.admin.Beranda_Admin;
 
 public class Stok extends AppCompatActivity {
 

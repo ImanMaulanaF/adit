@@ -1,14 +1,23 @@
 <resources>
     <string name="app_name">Abude</string>
+    <string name="jenis_konsumen">Jenis Konsumen :</string>
+    <string name="cabang">Cabang :</string>
+    <string name="nama_produk">Nama Produk :</string>
+    <string name="total">Total :</string>
+    <string name="waktu">Waktu :</string>
+
+    <!-- Untuk Cabang -->
     <string-array name="cabang">
         <item>"Semua"</item>
         <item>"Banjarbaru"</item>
         <item>"Banjarmasin"</item>
     </string-array>
+
     <string-array name="periode">
         <item>"Bulanan"</item>
         <item>"Tahunan"</item>
     </string-array>
+
     <string-array name="barang">
         <item>GULA</item>
         <item>CINCAU</item>
@@ -18,11 +27,13 @@
         <item>SEDOTAN</item>
         <item>SUSU</item>
     </string-array>
+
     <string-array name="supplier">
         <item>UMKM</item>
         <item>-</item>
     </string-array>
     <string-array name="menu">
+
         <item>CAPPUCINO CINCAU</item>
         <!--        <item>CAPPUCINO BUBLE</item>-->
         <!--        <item>CAPPUCINO COKLAT</item>-->
@@ -31,12 +42,25 @@
         <!--        <item>CAPPUCINO STRAWBERRY</item>-->
         <item>-</item>
     </string-array>
+
     <string-array name="konsumen">
         <item>UMUM</item>
         <item>Khusus</item>
     </string-array>
+
     <string-array name="tipekonsumen">
         <item>UMUM</item>
         <item>KHUSUS</item>
     </string-array>
+
+
+    <!-- STEP 1 -->
+    <string-array name="jenis_konsumen">
+        <item>ABC</item>
+        <item>DEF</item>
+        <item>123</item>
+        <item>234</item>
+        <item>534</item>
+    </string-array>
+
 </resources>

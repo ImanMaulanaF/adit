@@ -1,4 +1,4 @@
-package com.example.abude;
+package com.example.abude.ui.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.abude.R;
+import com.example.abude.ui.admin.Beranda_Admin;
+import com.example.abude.ui.owner.Beranda_Owner;
+import com.example.abude.ui.purchase.Beranda_Purchasing;
 
 public class Login extends AppCompatActivity {
     @Override

@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Jenis Konsumen : "
+            android:text="@string/jenis_konsumen"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/txt_jenis_konsumen"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="250dp"
-            android:text="Cabang : "
+            android:text="@string/cabang"
             android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_marginLeft="5dp"
-            android:text="Nama Produk : "
+            android:text="@string/nama_produk"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/txt_nama_produk"
@@ -50,7 +50,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_marginLeft="105dp"
-
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/txt_jumlah"
@@ -65,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
             android:layout_marginLeft="5dp"
-            android:text="Total : "
+            android:text="@string/total"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/txt_total"
@@ -79,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
             android:layout_marginLeft="205dp"
-            android:text="Waktu : "
+            android:text="@string/waktu"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/txt_waktu"

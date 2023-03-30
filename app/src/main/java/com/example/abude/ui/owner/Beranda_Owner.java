@@ -1,14 +1,16 @@
-package com.example.abude;
-
+package com.example.abude.ui.owner;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class Stok_Pengeluaran extends AppCompatActivity {
+import com.example.abude.R;
+
+public class Beranda_Owner extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stok_pengeluaran);
+        setContentView(R.layout.activity_beranda_owner);
+
+
     }
 }

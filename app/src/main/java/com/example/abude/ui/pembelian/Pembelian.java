@@ -1,4 +1,4 @@
-package com.example.abude;
+package com.example.abude.ui.pembelian;
 
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
@@ -10,29 +10,109 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.abude.R;
+import com.example.abude.adapter.BarangPembelianAdapter;
+import com.example.abude.adapter.RiwayatPembelianAdapter;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import cz.msebera.android.httpclient.Header;
+
 public class Pembelian extends AppCompatActivity {
 //    RecyclerView recyclerView;
 //    LinearLayoutManager linearLayoutManager;
 //    AdapterData adapterData;
 //    List<String> listdata;
-    private TextView jumlah,totalHarga;
+    private TextView jumlah, totalHarga;
     private Button stok, pembelian, logout;
     private EditText waktu;
     private ImageButton btn_tambah, btn_kurang, btn_submit, btn_date, date;
     private Spinner menu, konsumen;
     private AlertDialog builder;
+
+    private TextView tvBarang;
+
+    private RecyclerView rvBarang;
+
+    private ProgressBar progressBar;
+
+    private ArrayList<String> listBarang = new ArrayList<>();
+
+
+    public void getNamaBarang() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        String url = "http://abude.mythologica.xyz/API/Barang";
+//        client.addHeader("Authorization", "bearer 1235");
+        client.get(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                listBarang = new ArrayList<>();
+
+                progressBar.setVisibility(View.INVISIBLE);
+
+                String result = new String(responseBody);
+
+                try {
+                    JSONArray jsonArray = new JSONArray(result);
+
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        String namaBarang = jsonObject.getString("nama_barang");
+                        String hargaBarang = jsonObject.getString("harga_barang");
+
+                        listBarang.add(namaBarang + " - Rp." + hargaBarang);
+
+                    }
+
+                    BarangPembelianAdapter adapter = new BarangPembelianAdapter(listBarang);
+                    rvBarang.setAdapter(adapter);
+
+
+
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                String errorMessage;
+
+                switch (statusCode) {
+                    case 401:
+                        errorMessage = statusCode + ": Bad Request";
+                        break;
+                    case 404:
+                        errorMessage = statusCode + ": KDD REQUESTNYA";
+                        break;
+                    default:
+                        errorMessage = "Kesalahan";
+                        break;
+                }
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +125,20 @@ public class Pembelian extends AppCompatActivity {
         btn_submit = findViewById(R.id.btn_submit);
         date = findViewById(R.id.date);
         menu = findViewById(R.id.menu);
+
+        rvBarang = findViewById(R.id.rv_barang);
+        progressBar = findViewById(R.id.progressBar);
+
+//        getNamaBarang();
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        rvBarang.setLayoutManager(layoutManager);
+
+        getNamaBarang();
+
+//        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(Pembelian.this, android.R.layout.simple_spinner_item, dataSpinner);
+//        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+//        menu.setAdapter(spinnerArrayAdapter);
 
 //        recyclerView = findViewById(R.id.history);
 //        listdata = new ArrayList<>();
