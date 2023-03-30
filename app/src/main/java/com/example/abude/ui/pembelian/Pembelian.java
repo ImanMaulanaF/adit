@@ -62,7 +62,7 @@ public class Pembelian extends AppCompatActivity {
     public void getNamaBarang() {
         AsyncHttpClient client = new AsyncHttpClient();
         String url = "http://abude.mythologica.xyz/API/Barang";
-//        client.addHeader("Authorization", "bearer 1235");
+        client.addHeader("Authorization", "");
         client.get(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

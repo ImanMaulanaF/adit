@@ -56,11 +56,43 @@
 
     <!-- STEP 1 -->
     <string-array name="jenis_konsumen">
-        <item>ABC</item>
-        <item>DEF</item>
-        <item>123</item>
-        <item>234</item>
-        <item>534</item>
+        <item>Umum</item>
+        <item>Umum</item>
+        <item>Umum</item>
+        <item>Umum</item>
+        <item>Umum</item>
     </string-array>
 
+    <string-array name="nama_produk">
+        <item>Capcin 1</item>
+        <item>Capcin 2</item>
+        <item>Capcin 3</item>
+        <item>Capcin 4</item>
+        <item>Capcin 5</item>
+    </string-array>
+
+    <string-array name="riwayat_pembelian_cabang">
+        <item>Bjb 1</item>
+        <item>Bjb 2</item>
+        <item>Bjb 3</item>
+        <item>Bjb 4</item>
+        <item>Bjb 5</item>
+    </string-array>
+
+    <string-array name="riwayat_pembelian_total">
+        <item>Rp. 100.000</item>
+        <item>Rp. 200.000</item>
+        <item>Rp. 300.000</item>
+        <item>Rp. 400.000</item>
+        <item>Rp. 500.000</item>
+    </string-array>
+
+    <string-array name="riwayat_pembelian_waktu">
+        <item>31/03/2023 00.00.00</item>
+        <item>1/03/2023 00.00.00</item>
+        <item>2/03/2023 00.00.00</item>
+        <item>3/03/2023 00.00.00</item>
+        <item>4/03/2023 00.00.00</item>
+        <item>5/03/2023 00.00.00</item>
+    </string-array>
 </resources>

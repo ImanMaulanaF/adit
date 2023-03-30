@@ -13,6 +13,33 @@ public class RiwayatModel implements Parcelable {
     // STEP 3
     private String jenisKonsumen;
     private String namaProduk;
+    private String cabang;
+    private String total;
+    private String waktu;
+
+    public String getCabang() {
+        return cabang;
+    }
+
+    public void setCabang(String cabang) {
+        this.cabang = cabang;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    public String getWaktu() {
+        return waktu;
+    }
+
+    public void setWaktu(String waktu) {
+        this.waktu = waktu;
+    }
 
     public String getJenisKonsumen() {
         return jenisKonsumen;

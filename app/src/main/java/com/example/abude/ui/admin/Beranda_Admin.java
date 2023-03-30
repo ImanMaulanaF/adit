@@ -77,11 +77,19 @@ public class Beranda_Admin extends AppCompatActivity {
     // STEP 15, bikin list nya
     public ArrayList<RiwayatModel> getListRiwayat() {
         String[] dataJenisKonsumen = getResources().getStringArray(R.array.jenis_konsumen);
+        String[] dataNamaProduk = getResources().getStringArray(R.array.nama_produk);
+        String[] dataCabang = getResources().getStringArray(R.array.riwayat_pembelian_cabang);
+        String[] dataTotal = getResources().getStringArray(R.array.riwayat_pembelian_total);
+        String[] dataWaktu = getResources().getStringArray(R.array.riwayat_pembelian_waktu);
 
         ArrayList<RiwayatModel> listRiwayat = new ArrayList<>();
         for (int i = 0; i < dataJenisKonsumen.length; i++) {
             RiwayatModel model = new RiwayatModel();
             model.setJenisKonsumen(dataJenisKonsumen[i]);
+            model.setNamaProduk(dataNamaProduk[i]);
+            model.setCabang(dataCabang[i]);
+            model.setTotal(dataTotal[i]);
+            model.setWaktu(dataWaktu[i]);
 
             listRiwayat.add(model);
         }

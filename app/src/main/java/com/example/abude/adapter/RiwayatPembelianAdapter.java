@@ -41,6 +41,10 @@ public class RiwayatPembelianAdapter extends RecyclerView.Adapter<RiwayatPembeli
 
         // STEP 12
         holder.tvJenisKonsumen.setText(riwayatModel.getJenisKonsumen());
+        holder.tvNamaProduk.setText(riwayatModel.getNamaProduk());
+        holder.tvCabang.setText(riwayatModel.getCabang());
+        holder.tvTotal.setText(riwayatModel.getTotal());
+        holder.tvWaktu.setText(riwayatModel.getWaktu());
     }
 
 
@@ -53,12 +57,20 @@ public class RiwayatPembelianAdapter extends RecyclerView.Adapter<RiwayatPembeli
     public class RiwayatPembelianViewHolder extends RecyclerView.ViewHolder {
         // STEP 9, sesuaikan dengan kebutuhan view nya
         TextView tvJenisKonsumen;
+        TextView tvNamaProduk;
+        TextView tvCabang;
+        TextView tvTotal;
+        TextView tvWaktu;
 
         public RiwayatPembelianViewHolder(@NonNull View itemView) {
             super(itemView);
 
             // STEP 10, deklarasikan
             tvJenisKonsumen = itemView.findViewById(R.id.txt_jenis_konsumen);
+            tvNamaProduk = itemView.findViewById(R.id.txt_nama_produk);
+            tvCabang = itemView.findViewById(R.id.txt_cabang);
+            tvTotal = itemView.findViewById(R.id.txt_total);
+            tvWaktu = itemView.findViewById(R.id.txt_waktu);
         }
     }
 }
