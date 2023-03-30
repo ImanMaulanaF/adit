@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">Abude</string>
+    <string-array name="cabang">
+        <item>"Semua"</item>
+        <item>"Banjarbaru"</item>
+        <item>"Banjarmasin"</item>
+    </string-array>
+    <string-array name="periode">
+        <item>"Bulanan"</item>
+        <item>"Tahunan"</item>
+    </string-array>
+    <string-array name="barang">
+        <item>GULA</item>
+        <item>CINCAU</item>
+        <item>CAPPUCINO POWDER</item>
+        <item>ES Batu</item>
+        <item>GELAS PLASTIK</item>
+        <item>SEDOTAN</item>
+        <item>SUSU</item>
+    </string-array>
+    <string-array name="supplier">
+        <item>UMKM</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="menu">
+        <item>CAPPUCINO CINCAU</item>
+        <!--        <item>CAPPUCINO BUBLE</item>-->
+        <!--        <item>CAPPUCINO COKLAT</item>-->
+        <!--        <item>CAPPUCINO CARAMEL</item>-->
+        <!--        <item>CAPPUCINO CREAMY</item>-->
+        <!--        <item>CAPPUCINO STRAWBERRY</item>-->
+        <item>-</item>
+    </string-array>
+    <string-array name="konsumen">
+        <item>UMUM</item>
+        <item>Khusus</item>
+    </string-array>
+    <string-array name="tipekonsumen">
+        <item>UMUM</item>
+        <item>KHUSUS</item>
+    </string-array>
 </resources>

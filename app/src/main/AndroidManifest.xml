@@ -12,7 +12,13 @@
         android:theme="@style/Theme.Abude"
         tools:targetApi="31">
         <activity
-            android:name=".login"
+            android:name=".Stok_Pengeluaran"
+            android:exported="false" />
+        <activity
+            android:name=".Stok"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Beranda_Owner" />
+        <activity android:name=".Beranda_Purchasing" />
+        <activity android:name=".Beranda_Admin" />
+        <activity android:name=".Pembelian" />
+        <activity android:name=".Pengeluaran" />
     </application>
 
 </manifest>

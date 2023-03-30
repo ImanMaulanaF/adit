@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".login">
+    tools:context=".Login">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -52,7 +52,8 @@
                 android:hint="Username"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:textColor="@color/black"
-                android:drawablePadding="8dp"/>
+                android:drawablePadding="8dp"
+                android:inputType="text"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
