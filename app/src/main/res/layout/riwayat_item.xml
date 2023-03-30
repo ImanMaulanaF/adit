@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="185dp"
             android:text="@string/cabang"
             android:textColor="@color/black"/>
         <TextView
@@ -39,7 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="257dp"
+            android:text="aye"
+            android:layout_marginLeft="245dp"
             android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"
@@ -81,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
-            android:layout_marginLeft="205dp"
+            android:layout_marginLeft="185dp"
             android:text="@string/waktu"
             android:textColor="@color/black"/>
         <TextView
@@ -89,8 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
-            android:layout_marginLeft="255dp"
-            android:text=""
+            android:layout_marginLeft="235dp"
+            android:text="aaaa"
             android:textColor="@color/black"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
